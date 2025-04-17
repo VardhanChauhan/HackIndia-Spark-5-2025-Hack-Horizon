@@ -1,0 +1,172 @@
+/* Center the form in the middle of the page */
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full viewport height */
+  background: linear-gradient(to right, #e0f7fa, #ffffff); /* Soft gradient background */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px; /* Prevents edge cutoffs on small screens */
+  box-sizing: border-box;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  min-height: 550px;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 30px 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  color: teal;
+  margin-bottom: 4px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input {
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  padding: 14px 16px;
+  font-size: 14px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+::placeholder {
+  font-size: 12px;
+}
+
+.input:focus {
+  border-color: teal;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 128, 128, 0.2);
+}
+
+.form-btn {
+  padding: 14px;
+  border-radius: 25px;
+  background-color: teal;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-btn:hover {
+  background-color: #007e7e;
+  transform: scale(1.02);
+}
+
+.page-link {
+  text-align: end;
+  font-size: 12px;
+  color: #747474;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.page-link:hover,
+.page-link-label:hover {
+  color: teal;
+}
+
+.sign-up-label {
+  margin-top: -10px;
+  font-size: 12px;
+  text-align: center;
+  color: #747474;
+}
+
+.sign-up-link {
+  color: teal;
+  margin-left: 4px;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.sign-up-link:hover {
+  color: #005757;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.apple-login-button,
+.google-login-button {
+  border-radius: 20px;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.apple-login-button {
+  background-color: #2e2e2e;
+}
+
+.google-login-button {
+  background-color: #db4437;
+}
+
+.apple-login-button:hover,
+.google-login-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.login-button-container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* 📱 Responsive Tweaks */
+@media (max-width: 480px) {
+  .form-container {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .form-btn,
+  .apple-login-button,
+  .google-login-button {
+    font-size: 13px;
+    padding: 12px;
+  }
+
+  .input {
+    font-size: 13px;
+  }
+}
